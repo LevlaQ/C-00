@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gyildiz <gyildiz@student.42istanbul.c      +#+  +:+       +#+        */
+/*   By: gyildiz <gyildiz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 15:34:12 by gyildiz           #+#    #+#             */
-/*   Updated: 2025/08/29 20:05:08 by gyildiz          ###   ########.fr       */
+/*   Updated: 2025/08/31 16:43:59 by gyildiz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,12 @@ int	main(void)
 	PhoneBook	book;
 	while (42)
 	{
+		std::cout << "Enter Command (ADD, SEARCH, EXIT): ";
 		std::getline(std::cin, command);
-		if (command.empty())
+		if (std::cin.eof())
 			break;
+		if (command.empty())
+			continue;
 		if (command == "ADD")
 			book.add_function();
 		else if (command == "SEARCH")

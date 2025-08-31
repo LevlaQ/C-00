@@ -6,7 +6,7 @@
 /*   By: gyildiz <gyildiz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 15:30:51 by gyildiz           #+#    #+#             */
-/*   Updated: 2025/08/31 16:36:18 by gyildiz          ###   ########.fr       */
+/*   Updated: 2025/08/31 16:57:31 by gyildiz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,13 +97,13 @@ void	PhoneBook::search_function()
 		std::cout << std::setw(10) << adjust(this->list[i].nickname) << "|\n";
 		i++;
 	}
-	std::cout << "Contact's index: \n";
+	std::cout << "Contact's index: ";
 	std::getline(std::cin, index);
 	cindex = index.c_str();
 	i = std::atoi(cindex);
 	while (!(std::isdigit(cindex[0])) || (index.size() != 1) || !(i < people && i >= 0))
 	{
-		std::cout << "The index you have entered do not exist!\n";
+		std::cout << "The index you have entered do not exist! Enter again: ";
 		std::getline(std::cin, index);
 		cindex = index.c_str();
 		i = std::atoi(cindex);
@@ -114,7 +114,7 @@ void	PhoneBook::search_function()
 	std::cout << "Last  Name: "  << this->list[i].last_name << "\n";
 	std::cout << "Nickname : "  << this->list[i].nickname << "\n";
 	std::cout << "Phone Number: "  << this->list[i].phone_number << "\n";
-	std::cout << "Darkest Secret: "  << this->list[i].darkest_secret << "\n";	
+	std::cout << "Darkest Secret: "  << this->list[i].darkest_secret << "\n";
 }
 
 
