@@ -1,18 +1,18 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: gyildiz <gyildiz@student.42istanbul.c      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/28 18:34:11 by gyildiz           #+#    #+#              #
-#    Updated: 2025/08/28 18:50:16 by gyildiz          ###   ########.fr        #
+#    Updated: 2025/08/29 18:12:36 by gyildiz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = megaphone.cpp
+SRCS = main.cpp PhoneBook.cpp
 OBJS = $(SRCS:.cpp=.o)
-EXE_NAME = megaphone
+EXE_NAME = phonebook
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
