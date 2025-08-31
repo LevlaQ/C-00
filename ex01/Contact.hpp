@@ -6,7 +6,7 @@
 /*   By: gyildiz <gyildiz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 15:17:17 by gyildiz           #+#    #+#             */
-/*   Updated: 2025/08/31 15:57:13 by gyildiz          ###   ########.fr       */
+/*   Updated: 2025/08/31 18:14:28 by gyildiz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,4 +23,7 @@ class Contact
 	std::string	nickname;
 	std::string	phone_number;
 	std::string	darkest_secret;
+
+	private:
+	
 };
