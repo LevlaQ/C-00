@@ -6,9 +6,11 @@
 /*   By: gyildiz <gyildiz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 15:17:17 by gyildiz           #+#    #+#             */
-/*   Updated: 2025/09/02 11:49:53 by gyildiz          ###   ########.fr       */
+/*   Updated: 2025/09/02 15:15:49 by gyildiz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
 
 #include <iostream>
 #include <string>
