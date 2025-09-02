@@ -6,7 +6,7 @@
 /*   By: gyildiz <gyildiz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 15:17:17 by gyildiz           #+#    #+#             */
-/*   Updated: 2025/08/31 18:14:28 by gyildiz          ###   ########.fr       */
+/*   Updated: 2025/09/02 11:49:53 by gyildiz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,24 @@
 
 class Contact
 {
-	public:
+	private:
 	std::string	first_name;
 	std::string	last_name;
 	std::string	nickname;
 	std::string	phone_number;
 	std::string	darkest_secret;
 
-	private:
-	
+	public:
+
+	void	set_first_name(const std::string &str);
+	void	set_last_name(const std::string &str);
+	void	set_nickname(const std::string &str);
+	void	set_phone_number(const std::string &str);
+	void	set_darkest_secret(const std::string &str);
+
+	const	std::string& get_first_name(void) const;
+	const	std::string& get_last_name(void) const;
+	const	std::string& get_nickname(void) const;
+	const	std::string& get_phone_number(void) const;
+	const	std::string& get_darkest_secret(void) const;
 };

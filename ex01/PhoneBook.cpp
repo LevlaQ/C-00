@@ -6,7 +6,7 @@
 /*   By: gyildiz <gyildiz@student.42istanbul.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/29 15:30:51 by gyildiz           #+#    #+#             */
-/*   Updated: 2025/08/31 16:57:31 by gyildiz          ###   ########.fr       */
+/*   Updated: 2025/09/02 11:52:58 by gyildiz          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,52 +17,59 @@ PhoneBook::PhoneBook()
 	counter = 0;
 }
 
+//tmp'de soru çıkabilir
 void	PhoneBook::add_function()
 {
 	int empty = 1;
+	std::string tmp;
 	while (empty)
 	{
 		std::cout << "Enter first name: ";
-		std::getline(std::cin, this->list[counter % 8].first_name);
+		std::getline(std::cin, tmp);
+		this->list[counter % 8].set_first_name(tmp);
 		if (std::cin.eof())
 			exit(EXIT_FAILURE);
-		empty = this->list[counter % 8].first_name.empty();
+		empty = this->list[counter % 8].get_first_name().empty();
 	}
 	empty = 1;
 	while (empty)
 	{
 		std::cout << "Enter last name: ";
-		std::getline(std::cin, this->list[counter  % 8].last_name);
+		std::getline(std::cin, tmp);
+		this->list[counter  % 8].set_last_name(tmp);
 		if (std::cin.eof())
 			exit(EXIT_FAILURE);
-		empty = this->list[counter % 8].last_name.empty();
+		empty = this->list[counter % 8].get_last_name().empty();
 	}
 	empty = 1;
 	while (empty)
 	{
 		std::cout << "Enter nickname: ";
-		std::getline(std::cin, this->list[counter  % 8].nickname);
+		std::getline(std::cin, tmp);
+		this->list[counter  % 8].set_nickname(tmp);
 		if (std::cin.eof())
 			exit(EXIT_FAILURE);
-		empty = this->list[counter % 8].nickname.empty();
+		empty = this->list[counter % 8].get_nickname().empty();
 	}
 	empty = 1;
 	while (empty)
 	{
 		std::cout << "Enter phone number: ";
-		std::getline(std::cin, this->list[counter  % 8].phone_number);
+		std::getline(std::cin, tmp);
+		this->list[counter  % 8].set_phone_number(tmp);
 		if (std::cin.eof())
 			exit(EXIT_FAILURE);
-		empty = this->list[counter % 8].phone_number.empty();
+		empty = this->list[counter % 8].get_phone_number().empty();
 	}
 	empty = 1;
 	while (empty)
 	{
 		std::cout << "Tell me your darkest, deepest secret: ";
-		std::getline(std::cin, this->list[counter  % 8].darkest_secret);
+		std::getline(std::cin, tmp);
+		this->list[counter  % 8].set_darkest_secret(tmp);
 		if (std::cin.eof())
 			exit(EXIT_FAILURE);
-		empty = this->list[counter % 8].darkest_secret.empty();
+		empty = this->list[counter % 8].get_darkest_secret().empty();
 	}
 	this->counter++;
 }
@@ -92,9 +99,9 @@ void	PhoneBook::search_function()
 	while (i < people)
 	{
 		std::cout << std::setw(10) << i  << "|";
-		std::cout << std::setw(10) << adjust(this->list[i].first_name) << "|";
-		std::cout << std::setw(10) << adjust(this->list[i].last_name) << "|";
-		std::cout << std::setw(10) << adjust(this->list[i].nickname) << "|\n";
+		std::cout << std::setw(10) << adjust(this->list[i].get_first_name()) << "|";
+		std::cout << std::setw(10) << adjust(this->list[i].get_last_name()) << "|";
+		std::cout << std::setw(10) << adjust(this->list[i].get_nickname()) << "|\n";
 		i++;
 	}
 	std::cout << "Contact's index: ";
@@ -110,11 +117,11 @@ void	PhoneBook::search_function()
 		if (std::cin.eof())
 			exit(EXIT_FAILURE);
 	}
-	std::cout << "First Name: "  << this->list[i].first_name << "\n"; 
-	std::cout << "Last  Name: "  << this->list[i].last_name << "\n";
-	std::cout << "Nickname : "  << this->list[i].nickname << "\n";
-	std::cout << "Phone Number: "  << this->list[i].phone_number << "\n";
-	std::cout << "Darkest Secret: "  << this->list[i].darkest_secret << "\n";
+	std::cout << "First Name: "  << this->list[i].get_first_name() << "\n"; 
+	std::cout << "Last  Name: "  << this->list[i].get_last_name() << "\n";
+	std::cout << "Nickname : "  << this->list[i].get_nickname() << "\n";
+	std::cout << "Phone Number: "  << this->list[i].get_phone_number() << "\n";
+	std::cout << "Darkest Secret: "  << this->list[i].get_darkest_secret() << "\n";
 }
 
 

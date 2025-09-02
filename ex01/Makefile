@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: gyildiz <gyildiz@student.42istanbul.c      +#+  +:+       +#+         #
+#    By: gyildiz <gyildiz@student.42istanbul.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/08/28 18:34:11 by gyildiz           #+#    #+#              #
-#    Updated: 2025/08/29 18:12:36 by gyildiz          ###   ########.fr        #
+#    Updated: 2025/09/02 11:53:00 by gyildiz          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = main.cpp PhoneBook.cpp
+SRCS = main.cpp PhoneBook.cpp Contact.cpp
 OBJS = $(SRCS:.cpp=.o)
 EXE_NAME = phonebook
 CXX = c++
